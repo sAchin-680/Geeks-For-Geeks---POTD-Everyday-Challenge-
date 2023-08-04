@@ -1,0 +1,6 @@
+stack<int> ans;
+if(st.size==0) return;
+ans.push(st.top());
+st.pop();
+Reverse(st);
+ans=st;
