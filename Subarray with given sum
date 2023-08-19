@@ -1,0 +1,25 @@
+int i = 0;
+        int j = 0;
+        
+        long long sum = 0;
+        int start;
+        int end;
+        
+        while(j<n){
+            
+            sum += arr[j];
+            
+            while(sum >= s && i <= j){
+                
+                if(sum == s){
+                    return {i+1, j+1};
+                }
+                
+                sum -= arr[i];
+                i++;
+            }
+            
+            j++;
+        }
+        
+        return {-1};
